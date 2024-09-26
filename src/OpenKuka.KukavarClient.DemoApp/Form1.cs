@@ -278,7 +278,8 @@ namespace Kukavar.DemoApp
             // Init Client
             client = new KukavarClient(1, KukavarLogManager.GetLogger(1))
             {
-                ServerIP = IPAddress.Parse("192.168.10.4"),
+                // ServerIP = IPAddress.Parse("192.168.10.4"),
+                ServerIP = IPAddress.Parse("127.0.0.1"),
                 ServerPort = 7000,
                 MaxIdleTime = TimeSpan.FromSeconds(2)
             };

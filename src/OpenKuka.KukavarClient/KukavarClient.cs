@@ -140,6 +140,7 @@ namespace OpenKuka.KukavarClient
             
             if (ReplyQueue.TryRemove(answer.Id, out reply))
             {
+                Trace.WriteLine(reply.Answer.VarValue);
                 reply.SetAnswer(answer, chrono);
                 Logger.Log(LogLevel.Debug, "<< query dequeue : id={0}, len={1}, mode={2}, tm={3}", answer.Id, answer.MessageLength, answer.Mode, reply.RoundTripTime.TotalMilliseconds);
 

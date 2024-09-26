@@ -122,11 +122,11 @@ namespace AutoCompleteComboBox
 
             suggBindingList.Clear();
             suggBindingList.RaiseListChangedEvents = false;
-            propertySelectorCompiled(Items)
-                 .Where(filterRuleCompiled)
-                 .OrderBy(suggestListOrderRuleCompiled)
-                 .ToList()
-                 .ForEach(suggBindingList.Add);
+            // propertySelectorCompiled(Items)
+            //      .Where(filterRuleCompiled)
+            //      .OrderBy(suggestListOrderRuleCompiled)
+            //      .ToList()
+            //      .ForEach(suggBindingList.Add);
             suggBindingList.RaiseListChangedEvents = true;
             suggBindingList.ResetBindings();
 
